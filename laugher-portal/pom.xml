@@ -6,11 +6,11 @@
         <groupId>com.zhangxy</groupId>
         <artifactId>laugher</artifactId>
         <version>0.0.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>laugh-portal</artifactId>
     <version>0.0.1</version>
     <name>laugh-portal</name>
+    <packaging>jar</packaging>
     <description>服务</description>
 
     <properties>
@@ -57,6 +57,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.59</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.deepoove</groupId>
+            <artifactId>poi-tl</artifactId>
+            <version>1.6.0</version>
         </dependency>
 
     </dependencies>

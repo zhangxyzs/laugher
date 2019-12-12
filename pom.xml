@@ -12,10 +12,21 @@
     <artifactId>laugher</artifactId>
     <version>0.0.1</version>
     <name>laugher</name>
+    <packaging>pom</packaging>
     <description>讲个笑话给她听-订阅号</description>
 
+    <properties>
+        <skipTests>true</skipTests>
+    </properties>
     <modules>
         <module>laugh-portal</module>
     </modules>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -1,6 +1,7 @@
 package com.zhangxy.laughportal.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.zhangxy.laughportal.constants.RedisSystemKey;
 import com.zhangxy.laughportal.constants.WeChatConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,6 @@ import java.time.Duration;
 @RequestMapping("/wechat/auth")
 public class AuthController {
 
-    private static String WECHAT_ACCESS_TOKEN="WECHAT_ACCESS_TOKEN";
-
     @Value("${wechat.appID}")
     private String appID;
     @Value("${wechat.appSecret}")
@@ -47,7 +46,7 @@ public class AuthController {
         JSONObject body = object.getBody();
         String access_token = body.getString("access_token");
         //{"access_token":"ACCESS_TOKEN","expires_in":7200} 时间为秒，即2个小时
-        redisTemplate.opsForValue().set(WECHAT_ACCESS_TOKEN,access_token, Duration.ofHours(1));
+        redisTemplate.opsForValue().set(RedisSystemKey.REIDS_WECHAT_ACCESS_TOKEN,access_token, Duration.ofHours(1));
         return body;
     }
 }
