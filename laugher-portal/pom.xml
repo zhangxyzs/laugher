@@ -7,9 +7,9 @@
         <artifactId>laugher</artifactId>
         <version>0.0.1</version>
     </parent>
-    <artifactId>laugh-portal</artifactId>
+    <artifactId>laugher-portal</artifactId>
     <version>0.0.1</version>
-    <name>laugh-portal</name>
+    <name>laugher-portal</name>
     <packaging>jar</packaging>
     <description>服务</description>
 

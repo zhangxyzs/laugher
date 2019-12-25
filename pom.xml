@@ -19,7 +19,7 @@
         <skipTests>true</skipTests>
     </properties>
     <modules>
-        <module>laugh-portal</module>
+        <module>laugher-portal</module>
     </modules>
     <build>
         <plugins>
